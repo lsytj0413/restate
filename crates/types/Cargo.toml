@@ -47,7 +47,7 @@ figment = { version = "0.10.8", features = ["env", "toml"] }
 flexbuffers = { workspace = true }
 hostname = { workspace = true }
 http = { workspace = true }
-http-serde = { workspace = true }
+# http-serde = { workspace = true }
 humantime = { workspace = true }
 indexmap = { workspace = true, features = ["serde"] }
 itertools = { workspace = true }
@@ -83,7 +83,7 @@ tokio = { workspace = true, default-features = false, features = ["time", "sync"
 toml = { workspace = true }
 tonic = { workspace = true }
 tracing = { workspace = true }
-tracing-opentelemetry = { workspace = true }
+# tracing-opentelemetry = { workspace = true }
 ulid = { workspace = true }
 xxhash-rust = { workspace = true, features = ["xxh3"] }
 
@@ -104,3 +104,6 @@ serde_json = { workspace = true }
 syn = "2.0"
 typify = { version = "0.1.0" }
 jsonptr = "0.4.7"
+
+[package.metadata.cargo-machete]
+ignored = ["workspace-hack", "tonic-build", "prost", "jsonptr", "prettyplease", "sync", "typify", "regress"]

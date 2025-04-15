@@ -8,7 +8,7 @@ license.workspace = true
 publish = false
 
 [features]
-options_schema = ["dep:schemars"]
+# options_schema = ["dep:schemars"]
 test-util = []
 
 [dependencies]
@@ -28,7 +28,7 @@ chrono = { workspace = true }
 derive_more = { workspace = true }
 flexbuffers = { workspace = true }
 futures = { workspace = true }
-http = { workspace = true }
+# http = { workspace = true }
 indexmap = { workspace = true }
 itertools = { workspace = true }
 metrics = { workspace = true }
@@ -42,7 +42,7 @@ raft = { git = "https://github.com/tikv/raft-rs", rev = "2fbeee5b89b22c392da3943
 raft-proto = { git = "https://github.com/tikv/raft-rs", rev = "2fbeee5b89b22c392da39435b79be9896acedd1d" }
 rand = { workspace = true }
 rocksdb = { workspace = true }
-schemars = { workspace = true, optional = true }
+# schemars = { workspace = true, optional = true }
 serde = { workspace = true }
 serde_json = { workspace = true }
 serde_with = { workspace = true }
@@ -66,7 +66,10 @@ flexbuffers = { workspace = true }
 googletest = { workspace = true }
 tempfile = { workspace = true }
 test-log = { workspace = true }
-tracing-subscriber = { workspace = true }
+# tracing-subscriber = { workspace = true }
 
 [build-dependencies]
 tonic-build = { workspace = true }
+
+[package.metadata.cargo-machete]
+ignored = ["workspace-hack", "tonic-build", "prost"]
