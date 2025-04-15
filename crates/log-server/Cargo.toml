@@ -17,37 +17,29 @@ workspace-hack = { version = "0.1", path = "../../workspace-hack" }
 
 restate-bifrost = { workspace = true }
 restate-core = { workspace = true }
-restate-metadata-server = { workspace = true }
 restate-rocksdb = { workspace = true }
 restate-types = { workspace = true }
 
 anyhow = { workspace = true }
 async-trait = { workspace = true }
-bitflags = { workspace = true }
 bytes = { workspace = true }
 chrono = { workspace = true }
 codederror = { workspace = true }
-dashmap = { workspace = true }
 derive_more = { workspace = true }
 futures = { workspace = true }
 metrics = { workspace = true }
-pin-project = { workspace = true }
 rocksdb = { workspace = true }
-serde = { workspace = true }
 serde_json = { workspace = true }
 serde_with = { workspace = true }
-smallvec = { workspace = true }
 static_assertions = { workspace = true }
-prost = { workspace = true }
-prost-dto = { workspace = true }
-prost-types = { workspace = true }
 thiserror = { workspace = true }
 tokio = { workspace = true }
 tokio-stream = { workspace = true, features = ["sync"] }
-tokio-util = { workspace = true }
 tonic = { workspace = true, features = ["transport", "codegen", "prost", "gzip"] }
 tracing = { workspace = true }
-xxhash-rust = { workspace = true, features = ["xxh3"] }
+prost = { workspace = true }
+prost-dto = { workspace = true }
+prost-types = { workspace = true }
 
 [build-dependencies]
 tonic-build = { workspace = true }
@@ -56,12 +48,11 @@ tonic-build = { workspace = true }
 restate-bifrost = { workspace = true, features = ["test-util"] }
 restate-core = { workspace = true, features = ["test-util"] }
 restate-metadata-server = { workspace = true }
-restate-test-util = { workspace = true }
 restate-types = { workspace = true, features = ["test-util"] }
 
 googletest = { workspace = true }
-tempfile = { workspace = true }
 test-log = { workspace = true }
 tokio = { workspace = true, features = ["test-util"] }
-tracing-subscriber = { workspace = true }
-tracing-test = { workspace = true }
+
+[package.metadata.cargo-machete]
+ignored = ["workspace-hack", "tonic-build"]

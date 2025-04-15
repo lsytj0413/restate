@@ -12,12 +12,10 @@ default = []
 
 [dependencies]
 workspace-hack = { version = "0.1", path = "../../workspace-hack" }
-
 anyhow = { workspace = true }
 bytes = { workspace = true }
 bytestring = { workspace = true }
 codederror = { workspace = true }
-derive_builder = { workspace = true }
 derive_more = { workspace = true }
 enum-map = { workspace = true }
 futures = { workspace = true }
@@ -32,13 +30,11 @@ restate-rocksdb = { workspace = true }
 restate-storage-api = { workspace = true }
 restate-types = { workspace = true }
 rocksdb = { workspace = true }
-schemars = { workspace = true, optional = true }
 serde = { workspace = true }
 serde_json = { workspace = true }
 serde_with = { workspace = true, features = ["hex"] }
 static_assertions = { workspace = true }
 strum = { workspace = true }
-sync_wrapper = { workspace = true }
 thiserror = { workspace = true }
 tokio = { workspace = true, features = ["fs"] }
 tokio-stream = { workspace = true }
@@ -52,7 +48,6 @@ restate-test-util = { workspace = true }
 restate-types = { workspace = true, features = ["test-util"] }
 restate-service-protocol-v4 = { workspace = true, features = ["entry-codec"] }
 restate-storage-api = { workspace = true, features = ["test-util"] }
-
 criterion = { workspace = true, features = ["async_tokio"] }
 googletest = { workspace = true }
 num-bigint = "0.4"
