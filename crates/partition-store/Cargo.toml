@@ -9,7 +9,6 @@ publish = false
 
 [features]
 default = []
-options_schema = ["dep:schemars"]
 
 [dependencies]
 workspace-hack = { version = "0.1", path = "../../workspace-hack" }
@@ -67,3 +66,6 @@ prost-build = { workspace = true }
 [[bench]]
 name = "basic_benchmark"
 harness = false
+
+[package.metadata.cargo-machete]
+ignored = ["workspace-hack", "prost-build", "prost-types"]

@@ -23,3 +23,6 @@ restate-utoipa = { path = ".", features = ["debug"] }
 
 [lints.rust]
 unexpected_cfgs = { level = "warn", check-cfg = ['cfg(doc_cfg)'] }
+
+[package.metadata.cargo-machete]
+ignored = ["workspace-hack", "restate-utoipa", "assert-json-diff"]
