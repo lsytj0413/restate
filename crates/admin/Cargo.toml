@@ -75,7 +75,7 @@ restate-bifrost = { workspace = true, features = ["test-util"] }
 restate-core = { workspace = true, features = ["test-util"] }
 restate-test-util = { workspace = true }
 restate-types = { workspace = true, features = ["test-util"] }
-
+restate-admin = { path = ".", features = ["memory-loglet"]}
 googletest = { workspace = true }
 tempfile = { workspace = true }
 test-log = { workspace = true }

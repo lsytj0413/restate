@@ -6555,6 +6555,7 @@ dependencies = [
  "prost-dto",
  "prost-types",
  "rand 0.9.0",
+ "restate-admin",
  "restate-admin-rest-model",
  "restate-bifrost",
  "restate-core",
