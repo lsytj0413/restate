@@ -62,10 +62,10 @@ jobs:
         with:
           cache-on-failure: "true"
 
-      - name: Install cargo-hakari
+      - name: Install cargo-hakari and cargo-hack
         uses: taiki-e/install-action@v2
         with:
-          tool: cargo-hakari
+          tool: cargo-hakari,cargo-hack
 
       - name: Disable hakari
         run: cargo hakari disable
