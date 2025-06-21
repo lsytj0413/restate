@@ -17,7 +17,7 @@ workspace-hack = { version = "0.1", path = "../../workspace-hack" }
 
 restate-bifrost = { workspace = true }
 restate-core = { workspace = true }
-restate-log-server-grpc = { workspace = true, features = ["grpc-server"] }
+# restate-log-server-grpc = { workspace = true, features = ["grpc-server"] }
 restate-metadata-store = { workspace = true }
 restate-rocksdb = { workspace = true }
 restate-types = { workspace = true }
@@ -25,20 +25,20 @@ restate-types = { workspace = true }
 ahash = { workspace = true }
 anyhow = { workspace = true }
 async-trait = { workspace = true }
-bitflags = { workspace = true }
+# bitflags = { workspace = true }
 bytes = { workspace = true }
 chrono = { workspace = true }
 codederror = { workspace = true }
-dashmap = { workspace = true }
+# dashmap = { workspace = true }
 derive_more = { workspace = true }
 futures = { workspace = true }
 metrics = { workspace = true }
-pin-project = { workspace = true }
+# pin-project = { workspace = true }
 rocksdb = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true }
 serde_with = { workspace = true }
-smallvec = { workspace = true }
+# smallvec = { workspace = true }
 static_assertions = { workspace = true }
 prost = { workspace = true }
 prost-dto = { workspace = true }
@@ -46,7 +46,7 @@ prost-types = { workspace = true }
 thiserror = { workspace = true }
 tokio = { workspace = true }
 tokio-stream = { workspace = true, features = ["sync"] }
-tokio-util = { workspace = true }
+# tokio-util = { workspace = true }
 tonic = { workspace = true, features = ["transport", "codegen", "prost", "gzip"] }
 tracing = { workspace = true }
 xxhash-rust = { workspace = true, features = ["xxh3"] }

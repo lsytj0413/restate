@@ -32,7 +32,7 @@ restate-types = { workspace = true }
 
 arc-swap = { workspace = true }
 console-subscriber = { version = "0.4.1", features = [ "parking_lot", ], optional = true }
-derive_builder = { workspace = true }
+# derive_builder = { workspace = true }
 futures = { workspace = true }
 metrics = { workspace = true, optional = true }
 metrics-exporter-prometheus = { workspace = true, optional = true }

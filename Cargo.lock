@@ -1435,7 +1435,7 @@ version = "0.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6fac387a98bb7c37292057cffc56d62ecb629900026402633ae9160df93a8766"
 dependencies = [
- "nom 7.1.3",
+ "nom",
 ]
 
 [[package]]
@@ -3497,7 +3497,7 @@ dependencies = [
  "byteorder",
  "crossbeam-channel",
  "flate2",
- "nom 7.1.3",
+ "nom",
  "num-traits",
 ]
 
@@ -4050,15 +4050,6 @@ name = "is_terminal_polyfill"
 version = "1.70.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7943c866cc5cd64cbc25b2e01621d07fa8eb2a1a23160ee81ce38704e97b8ecf"
-
-[[package]]
-name = "iso8601"
-version = "0.6.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c5c177cff824ab21a6f41079a4c401241c4e8be14f316c4c6b07d5fca351c98d"
-dependencies = [
- "nom 8.0.0",
-]
 
 [[package]]
 name = "itertools"
@@ -4806,14 +4797,12 @@ dependencies = [
  "async-stream",
  "bytes",
  "futures",
- "http 1.3.1",
  "http-body-util",
  "hyper",
  "hyper-util",
  "prost",
  "restate-service-protocol",
  "restate-types",
- "serde",
  "serde_json",
  "thiserror 2.0.12",
  "tokio",
@@ -4914,15 +4903,6 @@ checksum = "d273983c5a657a70a3e8f2a01329822f3b8c8172b73826411a55751e404a0a4a"
 dependencies = [
  "memchr",
  "minimal-lexical",
-]
-
-[[package]]
-name = "nom"
-version = "8.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "df9761775871bdef83bee530e60050f7e54b1105350d6884eb0fb4f46c2f9405"
-dependencies = [
- "memchr",
 ]
 
 [[package]]
@@ -6646,7 +6626,6 @@ dependencies = [
  "datafusion",
  "derive_builder",
  "derive_more",
- "enumset",
  "futures",
  "googletest",
  "http 1.3.1",
@@ -6664,7 +6643,6 @@ dependencies = [
  "restate-bifrost",
  "restate-core",
  "restate-errors",
- "restate-futures-util",
  "restate-metadata-store",
  "restate-service-client",
  "restate-service-protocol",
@@ -6757,7 +6735,6 @@ dependencies = [
  "enumset",
  "futures",
  "googletest",
- "itertools 0.14.0",
  "metrics",
  "parking_lot",
  "paste",
@@ -6781,7 +6758,6 @@ dependencies = [
  "serde",
  "serde_json",
  "smallvec",
- "smartstring",
  "static_assertions",
  "tempfile",
  "test-log",
@@ -6794,7 +6770,6 @@ dependencies = [
  "tracing-subscriber",
  "tracing-test",
  "workspace-hack",
- "xxhash-rust",
 ]
 
 [[package]]
@@ -6806,14 +6781,12 @@ dependencies = [
  "arrow",
  "arrow_convert",
  "axum",
- "base62",
  "base64 0.22.1",
  "bs58",
  "bytes",
  "chrono",
  "chrono-humanize",
  "clap",
- "clap-verbosity-flag",
  "cling",
  "comfy-table",
  "const_format",
@@ -6848,7 +6821,6 @@ dependencies = [
  "strum 0.27.1",
  "sync_wrapper",
  "tempfile",
- "termcolor",
  "thiserror 2.0.12",
  "tokio",
  "tokio-util",
@@ -6902,25 +6874,19 @@ dependencies = [
  "axum",
  "bytes",
  "bytestring",
- "ciborium",
  "dashmap",
- "derive_builder",
  "derive_more",
  "enum-map",
  "enumset",
- "etcd-client",
  "futures",
  "googletest",
- "hostname",
  "http 1.3.1",
  "http-body 1.0.1",
- "http-body-util",
  "humantime",
  "hyper",
  "hyper-util",
  "itertools 0.14.0",
  "metrics",
- "object_store",
  "opentelemetry",
  "opentelemetry_sdk",
  "parking_lot",
@@ -6933,7 +6899,6 @@ dependencies = [
  "restate-core-derive",
  "restate-futures-util",
  "restate-metadata-store",
- "restate-object-store-util",
  "restate-test-util",
  "restate-types",
  "schemars 0.8.22",
@@ -6955,9 +6920,7 @@ dependencies = [
  "tracing-opentelemetry",
  "tracing-subscriber",
  "tracing-test",
- "url",
  "workspace-hack",
- "xxhash-rust",
 ]
 
 [[package]]
@@ -6987,7 +6950,6 @@ dependencies = [
 name = "restate-encoding-derive"
 version = "0.1.0"
 dependencies = [
- "proc-macro2",
  "quote",
  "syn 2.0.101",
  "workspace-hack",
@@ -7111,16 +7073,13 @@ dependencies = [
 name = "restate-invoker-api"
 version = "1.4.0-dev"
 dependencies = [
- "anyhow",
  "bytes",
- "bytestring",
  "codederror",
  "futures",
  "num-traits",
  "restate-errors",
  "restate-types",
  "serde",
- "thiserror 2.0.12",
  "tokio",
  "workspace-hack",
 ]
@@ -7210,22 +7169,18 @@ dependencies = [
  "ahash 0.8.11",
  "anyhow",
  "async-trait",
- "bitflags 2.9.1",
  "bytes",
  "chrono",
  "codederror",
- "dashmap",
  "derive_more",
  "futures",
  "googletest",
  "metrics",
- "pin-project",
  "prost",
  "prost-dto",
  "prost-types",
  "restate-bifrost",
  "restate-core",
- "restate-log-server-grpc",
  "restate-metadata-server",
  "restate-metadata-store",
  "restate-rocksdb",
@@ -7235,14 +7190,12 @@ dependencies = [
  "serde",
  "serde_json",
  "serde_with",
- "smallvec",
  "static_assertions",
  "tempfile",
  "test-log",
  "thiserror 2.0.12",
  "tokio",
  "tokio-stream",
- "tokio-util",
  "tonic",
  "tonic-build",
  "tracing",
@@ -7309,12 +7262,9 @@ dependencies = [
  "flexbuffers",
  "futures",
  "googletest",
- "http 1.3.1",
  "humantime",
- "indexmap 2.9.0",
  "itertools 0.14.0",
  "metrics",
- "parking_lot",
  "prost",
  "prost-dto",
  "protobuf",
@@ -7329,7 +7279,6 @@ dependencies = [
  "restate-types",
  "rust-rocksdb",
  "serde",
- "serde_json",
  "serde_with",
  "slog",
  "static_assertions",
@@ -7360,7 +7309,6 @@ dependencies = [
  "serde",
  "serde_json",
  "thiserror 2.0.12",
- "tokio",
  "tonic",
  "tonic-build",
  "tracing",
@@ -7397,7 +7345,6 @@ dependencies = [
  "async-trait",
  "axum",
  "bytes",
- "bytestring",
  "codederror",
  "derive_builder",
  "derive_more",
@@ -7473,7 +7420,6 @@ dependencies = [
  "codederror",
  "criterion",
  "dashmap",
- "derive_builder",
  "derive_more",
  "enum-map",
  "futures",
@@ -7485,7 +7431,6 @@ dependencies = [
  "paste",
  "prost",
  "prost-build",
- "prost-types",
  "rand 0.9.1",
  "restate-core",
  "restate-errors",
@@ -7500,7 +7445,6 @@ dependencies = [
  "serde_with",
  "static_assertions",
  "strum 0.27.1",
- "sync_wrapper",
  "tempfile",
  "thiserror 2.0.12",
  "tokio",
@@ -7529,12 +7473,9 @@ version = "1.4.0-dev"
 dependencies = [
  "anyhow",
  "bytes",
- "bytestring",
  "codederror",
  "derive_builder",
  "derive_more",
- "futures",
- "futures-util",
  "metrics",
  "parking_lot",
  "restate-core",
@@ -7562,8 +7503,6 @@ dependencies = [
  "bytesize",
  "http 1.3.1",
  "http-serde",
- "humantime",
- "iso8601",
  "jiff",
  "prost",
  "schemars 0.8.22",
@@ -7578,24 +7517,19 @@ name = "restate-server"
 version = "1.4.0-dev"
 dependencies = [
  "anyhow",
- "arc-swap",
  "async-trait",
  "bytes",
  "bytestring",
  "clap",
  "codederror",
- "derive_builder",
  "enumset",
  "futures-util",
  "googletest",
  "http 1.3.1",
  "http-body-util",
- "humantime",
  "hyper-util",
- "jiff",
  "mock-service-endpoint",
  "octocrab",
- "pin-project",
  "rand 0.9.1",
  "regex",
  "reqwest",
@@ -7603,7 +7537,6 @@ dependencies = [
  "restate-bifrost",
  "restate-core",
  "restate-errors",
- "restate-fs-util",
  "restate-local-cluster-runner",
  "restate-metadata-providers",
  "restate-metadata-server",
@@ -7614,21 +7547,16 @@ dependencies = [
  "restate-test-util",
  "restate-tracing-instrumentation",
  "restate-types",
- "restate-worker",
  "rlimit",
  "rust-rocksdb",
  "rustls",
  "schemars 0.8.22",
- "serde",
  "serde_json",
- "serde_with",
  "tempfile",
  "test-log",
- "thiserror 2.0.12",
  "tikv-jemallocator",
  "tokio",
  "tokio-util",
- "toml",
  "tonic",
  "tower 0.5.2",
  "tracing",
@@ -7673,7 +7601,6 @@ dependencies = [
  "serde_with",
  "tempfile",
  "thiserror 2.0.12",
- "tower 0.5.2",
  "tower-service",
  "tracing",
  "workspace-hack",
@@ -7742,7 +7669,6 @@ dependencies = [
  "anyhow",
  "bytes",
  "bytestring",
- "derive_more",
  "futures",
  "num-traits",
  "rangemap",
@@ -7762,7 +7688,6 @@ dependencies = [
  "async-trait",
  "bytes",
  "bytestring",
- "chrono",
  "codederror",
  "datafusion",
  "datafusion-functions-json",
@@ -7784,7 +7709,6 @@ dependencies = [
  "schemars 0.8.22",
  "serde",
  "serde_json",
- "strum 0.27.1",
  "thiserror 2.0.12",
  "tokio",
  "tokio-stream",
@@ -7798,28 +7722,17 @@ version = "1.4.0-dev"
 dependencies = [
  "anyhow",
  "async-trait",
- "bytes",
- "bytestring",
- "chrono",
  "codederror",
  "datafusion",
- "derive_builder",
  "futures",
- "paste",
  "pgwire",
- "prost",
  "restate-core",
- "restate-errors",
- "restate-partition-store",
- "restate-storage-api",
  "restate-storage-query-datafusion",
  "restate-types",
  "schemars 0.8.22",
- "serde",
  "thiserror 2.0.12",
  "tokio",
  "tracing",
- "uuid",
  "workspace-hack",
 ]
 
@@ -7840,18 +7753,14 @@ name = "restate-timer"
 version = "1.4.0-dev"
 dependencies = [
  "ahash 0.8.11",
- "derive_builder",
  "futures-util",
  "pin-project",
  "priority-queue",
  "restate-test-util",
  "restate-types",
  "schemars 0.8.22",
- "serde",
  "test-log",
- "thiserror 2.0.12",
  "tokio",
- "tokio-stream",
  "tokio-util",
  "tracing",
  "tracing-subscriber",
@@ -7873,7 +7782,6 @@ version = "1.4.0-dev"
 dependencies = [
  "arc-swap",
  "console-subscriber",
- "derive_builder",
  "futures",
  "metrics",
  "metrics-exporter-prometheus",
@@ -8107,7 +8015,6 @@ dependencies = [
  "assert2",
  "bytes",
  "bytesize",
- "bytestring",
  "chrono",
  "clap",
  "clap-stdin",
@@ -10704,7 +10611,7 @@ dependencies = [
  "metrics-util",
  "mio 1.0.3",
  "nix 0.29.0",
- "nom 7.1.3",
+ "nom",
  "num",
  "num-bigint",
  "num-integer",

@@ -34,7 +34,7 @@ derive_more = { workspace = true }
 enum-map = { workspace = true, features = ["serde"] }
 futures = { workspace = true }
 googletest = { workspace = true, features = ["anyhow"], optional = true }
-itertools = { workspace = true }
+# itertools = { workspace = true }
 metrics = { workspace = true }
 parking_lot = { workspace = true }
 pin-project = { workspace = true }
@@ -43,14 +43,14 @@ rocksdb = { workspace = true, optional = true }
 serde = { workspace = true }
 serde_json = { workspace = true }
 smallvec = { workspace = true }
-smartstring = { workspace = true }
+# smartstring = { workspace = true }
 static_assertions = { workspace = true }
 thiserror = { workspace = true }
 tokio = { workspace = true }
 tokio-stream = { workspace = true, features = ["sync"] }
 tokio-util = { workspace = true, features = ["rt"] }
 tracing = { workspace = true }
-xxhash-rust = { workspace = true, features = ["xxh3"] }
+# xxhash-rust = { workspace = true, features = ["xxh3"] }
 
 [dev-dependencies]
 # Enable local-loglet for use in various tests in this package. This allows us to not have it enabled by default,
